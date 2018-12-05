@@ -28,8 +28,6 @@ public class BoardHelper {
 				isAlive=true;
 			}
 		}
-		System.out.println(counter);
-		System.out.println(isAlive);
 		return isAlive;
 	}
 
