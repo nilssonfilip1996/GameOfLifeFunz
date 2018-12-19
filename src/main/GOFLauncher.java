@@ -2,7 +2,7 @@ package main;
 	
 import java.util.Random;
 
-import application.TreeOfLife;
+import application.GameOfLife;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,7 +18,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text; 
 
 
-public class TOFLauncher extends Application {
+public class GOFLauncher extends Application {
 	@Override
 	public void start(Stage stage) {
 //		try {
@@ -31,7 +31,7 @@ public class TOFLauncher extends Application {
 //			e.printStackTrace();
 //		}
 	      
-	     new TreeOfLife(stage);
+	     new GameOfLife(stage);
 	}
 	
 	public static void main(String[] args) {

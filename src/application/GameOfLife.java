@@ -12,18 +12,18 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import main.Settings;
 import utilities.BoardHelper;
-import views.TreeOfLifeView;
+import views.GameOfLifeView;
 
-public class TreeOfLife {
-	private TreeOfLifeView gameView;
+public class GameOfLife {
+	private GameOfLifeView gameView;
 	private int boardGridSize;
 	private int updateRate;
 	private int cells[][];
 
-	public TreeOfLife(Stage stage) {
+	public GameOfLife(Stage stage) {
 		boardGridSize = Settings.BOARD_GRID_SIZE;
 		updateRate = Settings.TICK_RATE;
-		gameView = new TreeOfLifeView(stage, boardGridSize);
+		gameView = new GameOfLifeView(stage, boardGridSize);
 		initGame();
 		gameView.initBoard(cells);
 //		for (int x = 0; x<cells.length; x++)
@@ -53,8 +53,8 @@ public class TreeOfLife {
 		Random rand = new Random();
 		for (int c = 0; c < boardGridSize; c++) {
 			for (int r = 0; r < boardGridSize; r++) {
-				if (c > (boardGridSize / 2)-10 && c < (boardGridSize / 2)+10 && r > (boardGridSize / 2)-10
-						&& r < (boardGridSize / 2)+10) {
+				if (c > (boardGridSize / 2)-20 && c < (boardGridSize / 2)+20 && r > (boardGridSize / 2)-20
+						&& r < (boardGridSize / 2)+20) {
 					int rVal = rand.nextInt(5);
 					if (rVal == 1) {
 						cells[c][r] = 1;

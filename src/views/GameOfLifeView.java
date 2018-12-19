@@ -11,14 +11,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class TreeOfLifeView {
+public class GameOfLifeView {
 	private Stage primaryStage;
 	private int boardSize;
 	private TilePane tilePane;
 
 	GridPane gridPane;
 
-	public TreeOfLifeView(Stage stage, int boardSize) {
+	public GameOfLifeView(Stage stage, int boardSize) {
 		this.primaryStage = stage;
 		this.boardSize = boardSize;
 	}
