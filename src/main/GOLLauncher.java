@@ -18,19 +18,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text; 
 
 
-public class GOFLauncher extends Application {
+public class GOLLauncher extends Application {
 	@Override
-	public void start(Stage stage) {
-//		try {
-//			BorderPane root = new BorderPane();
-//			Scene scene = new Scene(root,400,400);
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//			primaryStage.setScene(scene);
-//			primaryStage.show();
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//		}
-	      
+	public void start(Stage stage) {   
 	     new GameOfLife(stage);
 	}
 	

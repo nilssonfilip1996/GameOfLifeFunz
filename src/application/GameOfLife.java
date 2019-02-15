@@ -26,14 +26,6 @@ public class GameOfLife {
 		gameView = new GameOfLifeView(stage, boardGridSize);
 		initGame();
 		gameView.initBoard(cells);
-//		for (int x = 0; x<cells.length; x++)
-//		{
-//		   for (int y = 0; y<cells.length; y++)
-//		   {
-//		        BoardHelper.evaluateCell(cells, x, y);
-//		   }
-//		   //System.out.println();
-//		}
 		startGame();
 	}
 
@@ -48,6 +40,9 @@ public class GameOfLife {
 
 	}
 
+	/**
+	 * Used once to initiate the board.
+	 */
 	private void initGame() {
 		cells = new int[boardGridSize][boardGridSize];
 		Random rand = new Random();
@@ -67,6 +62,9 @@ public class GameOfLife {
 		}
 	}
 
+	/**
+	 * Called in intervals based on TICK_RATE that is defined in Settings.
+	 */
 	private void updateGOL() {
 		int temp[][] = new int[boardGridSize][boardGridSize];
 		for (int c = 0; c < boardGridSize; c++) {
@@ -85,15 +83,7 @@ public class GameOfLife {
 			@Override
 			public void run() {
 				gameView.updateGrid(cells);
-				System.out.println("tick");
-//				for (int[] x : cells)
-//				{
-//				   for (int y : x)
-//				   {
-//				        System.out.print(y + " ");
-//				   }
-//				   System.out.println();
-//				}
+				//System.out.println("tick");
 			}
 		});
 	}

@@ -1,6 +1,14 @@
 package utilities;
 
 public class BoardHelper {
+	/**
+	 * Evaluates a cell based on Conway's Game of Life rules.
+	 * 
+	 * @param board, entire grid
+	 * @param c, column index
+	 * @param r, row index
+	 * @return
+	 */
 	public static boolean evaluateCell(int board[][], int c, int r) {
 		int counter=0;
 		for (int i = -1; i < 2; i++) {
